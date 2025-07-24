@@ -13,7 +13,7 @@ const Farms = () => {
   const [selectedFarm, setSelectedFarm] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-24">
       <MobileHeader title="Assigned Farms" showBack />
       
       <div className="p-4 space-y-4">
@@ -66,7 +66,7 @@ const Farms = () => {
       </div>
 
       {/* Floating Action Button */}
-      <div className="fixed bottom-24 right-4">
+      <div className="fixed bottom-28 right-4 z-40">
         <Button
           size="lg"
           className="h-14 w-14 rounded-full shadow-lg"

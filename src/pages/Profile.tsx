@@ -19,7 +19,7 @@ const Profile = () => {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-24">
       <MobileHeader title="Profile" showBack />
       
       <div className="p-4 space-y-6">

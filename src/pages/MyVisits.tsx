@@ -17,7 +17,7 @@ const MyVisits = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-24">
       <MobileHeader title="My Visits" showBack />
       
       <div className="p-4 space-y-4">

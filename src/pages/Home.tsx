@@ -22,7 +22,7 @@ const Home = () => {
   const totalCompletedVisits = mockFarms.reduce((sum, farm) => sum + farm.completedVisits, 0);
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-24">
       <MobileHeader 
         title="Home" 
         showSettings 
@@ -72,32 +72,40 @@ const Home = () => {
           </div>
         </div>
 
-        {user.status === "approved" && (
-          <Card className="p-4">
-            <h3 className="font-semibold mb-3">Quick Actions</h3>
-            <div className="space-y-3">
-              <button 
-                onClick={() => navigate("/farms")}
-                className="w-full p-3 text-left border rounded-lg hover:bg-muted transition-colors"
-              >
-                <div className="font-medium">View Assigned Farms</div>
-                <div className="text-sm text-muted-foreground">
-                  See your farm assignments and visit progress
-                </div>
-              </button>
-              
-              <button 
-                onClick={() => navigate("/my-visits")}
-                className="w-full p-3 text-left border rounded-lg hover:bg-muted transition-colors"
-              >
-                <div className="font-medium">My Visits</div>
-                <div className="text-sm text-muted-foreground">
-                  Review completed visit reports
-                </div>
-              </button>
-            </div>
-          </Card>
-        )}
+        <Card className="p-4">
+          <h3 className="font-semibold mb-3">Quick Actions</h3>
+          <div className="space-y-3">
+            <button 
+              onClick={() => navigate("/farms")}
+              className="w-full p-3 text-left border rounded-lg hover:bg-muted transition-colors"
+            >
+              <div className="font-medium">View Assigned Farms</div>
+              <div className="text-sm text-muted-foreground">
+                See your farm assignments and visit progress
+              </div>
+            </button>
+            
+            <button 
+              onClick={() => navigate("/my-visits")}
+              className="w-full p-3 text-left border rounded-lg hover:bg-muted transition-colors"
+            >
+              <div className="font-medium">My Visits</div>
+              <div className="text-sm text-muted-foreground">
+                Review completed visit reports
+              </div>
+            </button>
+            
+            <button 
+              onClick={() => navigate("/add-farmer")}
+              className="w-full p-3 text-left border rounded-lg hover:bg-muted transition-colors"
+            >
+              <div className="font-medium">Add New Farmer</div>
+              <div className="text-sm text-muted-foreground">
+                Register a new farmer in your region
+              </div>
+            </button>
+          </div>
+        </Card>
       </div>
 
       <BottomNavigation />
